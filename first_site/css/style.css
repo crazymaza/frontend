@@ -1,0 +1,60 @@
+body {
+    font-family: Tahoma;
+}
+button:focus {
+    outline: none;
+}
+.container {
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header {
+    padding-top: 77px;
+    padding-bottom: 96px;
+}
+.header-img {
+    display: inline-block;
+    width: 45%;
+    vertical-align: middle;
+}
+.header-text {
+    display: inline-block;
+    width: 54%;
+    vertical-align: middle;
+}
+.header-text__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.header-text__subtitle {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+.header-text__descr {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    max-width: 526px;
+    margin-bottom: 47px;
+}
+.header-text__price {
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 53px;
+}
+.button {
+    border-radius: 5px;
+    background-color: #f05a22;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 22px 43px;
+}
+.button-o {
+    color: #f05a22;
+    background-color:transparent;
+    border: 2px solid #f05a22;
+}

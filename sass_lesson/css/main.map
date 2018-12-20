@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../sass/main.css",
+	"sources": [
+		"../sass/main.sass"
+	],
+	"sourcesContent": [
+		"$color666: #666666 !default;\n$color13: #131313 !default;\n\n.footer {\n    margin-top: 60px;\n    background-color: $color13;\n    padding: 59px 0;\n    color: $color666;\n    p {\n        margin-bottom: 14px; }\n    a {\n        color: $color666; } }\n\n"
+	],
+	"mappings": ";AAGA,AAAA,OAAO,CAAC;EACJ,UAAU,EAAE,IAAK;EACjB,gBAAgB,EAJV,OAAO;EAKb,OAAO,EAAE,MAAO;EAChB,KAAK,EAPE,OAAO;CAWW;;;AAR7B,AAKI,OALG,CAKH,CAAC,CAAC;EACE,aAAa,EAAE,IAAK;CAAG;;;AAN/B,AAOI,OAPG,CAOH,CAAC,CAAC;EACE,KAAK,EAXF,OAAO;CAWS",
+	"names": []
+}

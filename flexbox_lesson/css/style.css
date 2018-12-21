@@ -1,0 +1,55 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1920px;
+  max-height: 723px;
+  background-color: white;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 125px;
+}
+
+.instruments {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.instruments-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.instruments-info .info {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.instruments-info .price {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.instruments-info .button-o {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #23bac1;
+  background-color: white;
+  border: 1px solid #23bac1;
+  padding: 23px 75px;
+}
+
+.instruments-info .button-o:focus {
+  outline: none;
+}

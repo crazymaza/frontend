@@ -1,0 +1,44 @@
+$margBottom: 25px
+$borderColor: #23bac1
+$textColor: #23bac1
+$background: white
+    
+body 
+    font-family: sans-serif;
+.container
+    max-width: 1920px
+    max-height: 723px
+    background-color: $background
+h1 
+    font-size: 36px
+    font-weight: 400
+    text-align: center
+    margin-bottom: 125px
+.instruments
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    &-info 
+        display: flex
+        flex-direction: column
+        text-align: center
+        margin-bottom: $margBottom
+        .info
+            font-size: 16px
+            font-weight: 300
+            margin-bottom: $margBottom
+        .price
+            font-size: 18px
+            font-weight: 700
+            margin-bottom: $margBottom
+        .button-o
+            font-size: 13px
+            font-weight: 700
+            text-transform: uppercase
+            color: $textColor
+            background-color: $background
+            border: 1.0px solid $borderColor
+            padding: 23px 75px
+            &:focus
+                outline: none
+

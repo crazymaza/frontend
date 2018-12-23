@@ -1,0 +1,106 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Tahoma', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 96px;
+}
+
+.header-text {
+  max-width: 526px;
+  margin-left: 77px;
+}
+
+.header-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.header-text h2 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.header-descr {
+  margin-bottom: 53px;
+}
+
+.header-descr p {
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 47px;
+}
+
+.header-descr .price {
+  font-size: 48px;
+  font-weight: 400;
+  color: #313131;
+}
+
+.header .button {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 22px 42px;
+  background-color: #f05a22;
+  border-radius: 5.0px;
+  cursor: pointer;
+}
+
+.header .button:focus {
+  outline: none;
+}
+
+.header .button-o {
+  background-color: transparent;
+  margin-left: 40px;
+  border: 1px solid #f05a22;
+  color: #f05a22;
+}
+
+.delivery {
+  background-color: #f2f2f2;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.delivery h2 {
+  margin-top: 89px;
+  margin-bottom: 91px;
+  text-align: center;
+}
+
+.delivery .advantages {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 99px;
+}
+
+.delivery .advantages .advant-point {
+  display: flex;
+  flex-direction: column;
+  max-width: 220px;
+}
+
+.delivery .advantages .advant-point img {
+  margin-bottom: 23px;
+}
+
+.delivery .advantages .advant-point .shop-cart {
+  margin-bottom: 10px;
+}
+
+.delivery .advantages .advant-point span {
+  color: #333333;
+  font-family: OpenSans;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+}

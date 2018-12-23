@@ -1,0 +1,78 @@
+$black: #000000
+$gray: #313131
+$gray-darken: #333333
+$orange: #f05a22
+$secBlockColor: #f2f2f2
+
+.container
+    margin-left: auto
+    margin-right: auto
+    font-family: 'Tahoma', sans-serif
+.header
+    display: flex
+    justify-content: center
+    margin-bottom: 96px
+    &-text 
+        max-width: 526px
+        margin-left: 77px
+        h1 
+            font-size: 48px
+            font-weight: 700
+            margin-bottom: 15px
+        h2 
+            font-size: 30px
+            font-weight: 400
+            margin-bottom: 35px
+    &-descr
+        margin-bottom: 53px
+        p 
+            font-size: 18px
+            line-height: 27px
+            margin-bottom: 47px
+        .price
+            font-size: 48px
+            font-weight: 400
+            color: $gray
+    .button
+        font-size: 24px
+        font-weight: 700
+        padding: 22px 42px
+        background-color: $orange
+        border-radius: 5.0px
+        cursor: pointer
+        &:focus
+            outline: none
+        &-o 
+            background-color: transparent
+            margin-left: 40px
+            border: 1px solid $orange
+            color: $orange      
+.delivery
+    background-color: $secBlockColor
+    border: 1px solid #fff    
+    display: flex
+    flex-direction: column
+    text-align: center
+    h2 
+        margin-top: 89px
+        margin-bottom: 91px
+        text-align: center
+    .advantages
+        display: flex
+        justify-content: space-around
+        margin-bottom: 99px
+        .advant-point
+            display: flex
+            flex-direction: column
+            max-width: 220px
+            img 
+                margin-bottom: 23px
+            .shop-cart 
+                margin-bottom: 10px
+            span 
+                color: $gray-darken
+                font-family: OpenSans
+                font-size: 18px
+                line-height: 22px
+                font-weight: 400
+    

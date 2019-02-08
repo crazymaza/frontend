@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.header-phone {
+  display: flex;
+  justify-content: flex-end; }
+  .header-phone__number {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #373737; }
+  .header-phone__button {
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #ff9d00;
+    border: none;
+    color: white;
+    border-radius: 5px; }
+  .header-phone fa {
+    width: 20px;
+    height: 20px; }

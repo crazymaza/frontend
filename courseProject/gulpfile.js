@@ -1,31 +1,45 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const autoprefixer = require('autoprefixer');
+const browserSync = require('browser-sync').create();
+const concatCss = require('gulp-concat-css'); //не работает.
+ 
+sass.compiler = require('node-sass');
 
-gulp.task('sass', function(done) {
-    gulp.src("scr/scss/*.scss")
-        .pipe(sass())
-        .pipe(gulp.dest("scr/css"))
-        .pipe(browserSync.stream());
-
-
-    done();
+const config = {
+    src: "./src", // директория с исходниками
+    //build: "./build" // Директория сборки
+ };
+ 
+gulp.task('sass', function () {
+  return gulp.src(`${config.src}/sass/*.sass`)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('src/css'))
+    .pipe(concatCss("bundle.css")); //не работает.
+});
+ 
+gulp.task('sass:watch', function () {
+  gulp.watch('sass/*.sass', ['sass']);
 });
 
-gulp.task('serve', function(done) {
+gulp.task('build', gulp.series(
+    gulp.parallel('sass')
+));
 
+gulp.task('server', function () {
     browserSync.init({
-        server: "src/"
+        server: {
+            baseDir: config.src,
+            index: 'index.html'
+        }
     });
-
-    gulp.watch("scr/sass/*.sass", gulp.series('sass'));
-    gulp.watch("scr/*.html").on('change', () => {
-      browserSync.reload();
-      done();
-    });
-  
-
-    done();
+    browserSync.watch(`${config.src}/**/*.*`,`${config.src}/*.*`).on('change', browserSync.reload)
 });
 
-gulp.task('default', gulp.series('sass', 'serve'));
+gulp.task('watch', function () {
+    gulp.watch(`${config.src}/sass/*.sass`, gulp.series('sass'));
+   // gulp.watch(`${config.src}/js/**/*.js`, gulp.series('js'));
+   // gulp.watch(`${config.src}/assets/*.html`, gulp.series('html'));
+});
+
+gulp.task('default', gulp.series('build', gulp.parallel('watch', 'server')));

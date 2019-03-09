@@ -74,6 +74,10 @@ body {
       border: 1px solid #ffffff;
       border-radius: 50%;
       z-index: -1; }
+    .first-box img:last-child {
+      position: absolute;
+      bottom: 35px;
+      left: 110px; }
   .first-text-and-form {
     width: 600px;
     color: #fff; }

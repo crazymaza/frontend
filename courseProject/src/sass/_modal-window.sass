@@ -1,6 +1,6 @@
 .over
     position: absolute
-    display: flex
+    display: none
     top: 0
     left: 0
     width: 100%
@@ -12,6 +12,14 @@
 .modal-window
     width: 750px
     color: white
+    position: relative
+    &-close 
+        position: absolute
+        font-size: 30px
+        top: -30px
+        right: -10px
+        font-weight: 300
+        cursor: pointer
     &-head
         background-color: $buton-bg-color
         width: 100%

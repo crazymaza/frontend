@@ -12,6 +12,7 @@
   border: none;
   color: white;
   border-radius: 5px;
+  box-sizing: border-box;
   padding: 10px; }
 
 .big-button {
@@ -20,7 +21,7 @@
 
 .over {
   position: absolute;
-  display: flex;
+  display: none;
   top: 0;
   left: 0;
   width: 100%;
@@ -32,7 +33,15 @@
 
 .modal-window {
   width: 750px;
-  color: white; }
+  color: white;
+  position: relative; }
+  .modal-window-close {
+    position: absolute;
+    font-size: 30px;
+    top: -30px;
+    right: -10px;
+    font-weight: 300;
+    cursor: pointer; }
   .modal-window-head {
     background-color: #ff9d00;
     width: 100%;

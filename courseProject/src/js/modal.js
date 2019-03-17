@@ -5,4 +5,11 @@ $(function(){
     $(".modal-window-close").click(function() {
         $(".over").css("display", "none")
     })
+    $(".over").click(function() {
+        $(".over").css("display", "none")
+    })
+    $(".modal-window").click(function(event){
+        event.stopPropagation()
+    })
+    
 })

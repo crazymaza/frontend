@@ -1,0 +1,72 @@
+// Оформляю первый экран
+.first
+    display: flex
+    position: relative
+    width: 100%
+    height: 530px
+    margin-top: 15px
+    background: #373737 url(../../img/head-picture.png) center no-repeat 
+    background-size: cover
+    justify-content: space-around
+    align-items: center
+    z-index: 1
+    &::before
+        content: ""
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(#000,.6)
+        z-index: 0
+    // Оформляю коробки
+    &-box 
+        position: relative
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            width: 390px
+            height: 390px
+            left: 50%
+            margin-left: -195px
+            border: 1px solid #ffffff
+            border-radius: 50%
+            z-index: -1
+        img:last-child
+            position: absolute
+            bottom: 35px
+            left: 110px
+    // Оформляю форму и текст
+    &-text-and-form
+        width: 600px
+        color: #fff
+        & .first-text
+            &__h1
+                font-size: 41px
+                font-weight: 700
+            &__span
+                font-size: 28px
+                font-weight: 300
+        & .first-form
+            margin-top: 24px
+            box-sizing: border-box
+            padding: 30px 27px
+            background-color: rgba(#6f6e6a, 0.8)
+            &__label
+                font-size: 20px
+                margin-bottom: 20px
+                line-height: 30px
+                & span 
+                    font-size: 20px
+                    font-weight: 700
+                    text-transform: uppercase
+            & input 
+                width: 300px
+                height: 56px
+                border-radius: 5px
+                padding-top: 2px
+                padding-left: 19px
+                margin-right: 10px
+            

@@ -1,0 +1,32 @@
+// Блок продукция
+.product
+    display: flex
+    justify-content: center
+    align-items: center
+    &-h2 
+        margin: 57px 0 37px 0
+        text-align: center
+        text-transform: uppercase
+        font-weight: 900
+        position: relative
+        &:before
+            content: "~~~"
+            position: absolute
+            top: 25px
+            left: 47%
+            font-weight: normal
+    &-box
+        display: flex
+        flex-direction: column
+        align-items: center
+        img 
+            width: 410px
+            height: 280px
+            margin-bottom: 19px
+        &__span
+            font-weight: 900
+            margin-bottom: 28px
+        &__button
+            margin-bottom: 35px
+            & .btn-trans
+                margin-right: 12px

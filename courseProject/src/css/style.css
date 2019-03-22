@@ -11,6 +11,20 @@ body {
 .underline {
   font-size: 12px; }
 
+.h2-text {
+  margin: 57px 0 37px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  position: relative;
+  padding-top: 40px; }
+  .h2-text:before {
+    content: "~~~";
+    position: absolute;
+    top: 70px;
+    left: 47%;
+    font-weight: normal; }
+
 @font-face {
   font-family: 'Roboto';
   src: url("../fonts/Roboto-Regular.ttf") format("truetype");
@@ -149,6 +163,11 @@ nav {
     font-size: 20px;
     margin-right: 7px; }
 
+.header-img {
+  background: url(../../img/logo.jpg) center no-repeat;
+  width: 191px;
+  height: 61px; }
+
 .first {
   display: flex;
   position: relative;
@@ -271,19 +290,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center; }
-  .product-h2 {
-    margin: 57px 0 37px 0;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 900;
-    position: relative;
-    padding-top: 45px; }
-    .product-h2:before {
-      content: "~~~";
-      position: absolute;
-      top: 70px;
-      left: 47%;
-      font-weight: normal; }
   .product-box {
     display: flex;
     flex-direction: column;
@@ -352,7 +358,8 @@ nav {
   display: flex;
   justify-content: center;
   margin-top: 60px;
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  padding-top: 50px; }
   .production .row {
     display: flex;
     justify-content: center; }
@@ -400,19 +407,6 @@ nav {
   justify-content: center;
   flex-direction: column;
   align-items: center; }
-  .clients h2 {
-    margin: 57px 0 37px 0;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 900;
-    position: relative;
-    padding-top: 30px; }
-    .clients h2:before {
-      content: "~~~";
-      position: absolute;
-      top: 70px;
-      left: 35%;
-      font-weight: normal; }
   .clients .clients-img-wrap {
     width: 212px;
     height: 130px;
@@ -428,3 +422,19 @@ nav {
       .clients .clients-img-wrap img:hover {
         -webkit-filter: grayscale(0);
         filter: grayscale(0); }
+
+.feedback {
+  height: 570px;
+  background-color: #f4f4f4; }
+  .feedback .row {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .feedback .row .fa {
+      font-size: 100px;
+      color: #ff9d00; }
+    .feedback .row img {
+      max-width: 256px;
+      max-height: 360px;
+      margin-left: 38px;
+      margin-right: 38px; }

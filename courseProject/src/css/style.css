@@ -433,7 +433,9 @@ nav {
     .feedback .row .fa {
       font-size: 100px;
       color: #ff9d00;
-      border: 1px solid gray; }
+      cursor: pointer; }
+      .feedback .row .fa:hover {
+        text-shadow: 2px 2px 4px #373737, 0 0 0.5em #373737; }
     .feedback .row img {
       max-width: 256px;
       max-height: 360px;
@@ -441,7 +443,8 @@ nav {
       margin-right: 29px;
       transition: 1s; }
     .feedback .row .img-container {
+      display: flex;
+      position: relative;
       max-width: 942.97px;
       max-height: 360px;
-      overflow: hidden;
-      transition: 1s; }
+      overflow: hidden; }

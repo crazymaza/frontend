@@ -11,36 +11,26 @@ var right = document.querySelector(".fa-angle-right")
 var img = container.querySelectorAll("img")
 var imgContainer = container.querySelector(".img-container")
 
+var index = 0 //Индекс элемента в массиве
+var value = 300 //Значение сдвига картинки.
 
-index = 0
-
+//Действие пи нажатии левой стрелочки.
 left.addEventListener('click', function() {
-    if (index < 4) {
-        var currect = img[index]
-        var newImg = document.createElement('img')
-        img[index].style.transform = 'translateX(-290px)'  
-        img[index].remove()
-        currect.style.transform = 'translateX(0)'
-        imgContainer.insertAdjacentElement('beforeend', newImg)
-        index++
-        newImg.src = 'img/letter' + index + '.png'
+    index = img.length
+    while (index > 0) {
+        img[--index].style.transform = 'translateX(0)'
     }
+    
 })
 
+//Действие при нажатии правой стрелочки.
 right.addEventListener('click', function() {
-    if (index == 0) {
-        index = 4 
+    while (index < img.length) {
+        img[index++].style.transform = 'translateX(-' + value + 'px)'
     }
-    if (index > 0) {
-        index--
-        var currect = img[index]
-        var newImg = document.createElement('img')
-        img[index].style.transform = 'translateX(290px)'  
-        img[index].remove()
-        currect.style.transform = 'translateX(0)'
-        imgContainer.insertAdjacentElement('afterbegin', newImg)
-        newImg.src = 'img/letter' + (index + 1) + '.png'
-    }
+    index = 0
+    value += 300
+    console.log(index)
 })
 
 

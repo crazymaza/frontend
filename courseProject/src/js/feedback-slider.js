@@ -17,10 +17,12 @@ var value = 300 //Значение сдвига картинки.
 //Действие пи нажатии левой стрелочки.
 left.addEventListener('click', function() {
     index = img.length
-    while (index > 0) {
-        img[--index].style.transform = 'translateX(0)'
+    if (value >= 300 || value <= 300) {
+        value = 0
     }
-    
+    while (index > 0) {
+        img[--index].style.transform = 'translateX(' + value + 'px)'
+    }
 })
 
 //Действие при нажатии правой стрелочки.
@@ -30,7 +32,9 @@ right.addEventListener('click', function() {
     }
     index = 0
     value += 300
-    console.log(index)
+    if (value >= 1200) {
+        value = 1200
+    }
 })
 
 

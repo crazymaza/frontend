@@ -1,21 +1,39 @@
-$(function() {
-    var img1 = $('#img1')
-    var img2 = $('#img2')
-    var img3 = $('#img3')
-    var li = document.getElementsByClassName('first-block__pic')
-    var liArr = (li.length)
+/* Индекс слайда по умолчанию */
+var slideIndex = 1;
+showSlides(slideIndex);
 
-    var changeOpacity = function() {
-        for (let index = 0; index < li.length; index++) {
-            var img = li[index].children[0]
-            // img.css('opacity', 0)
-            // console.log(li[index].children[0])
-        }
-    
-        // img1.css('opacity', 0)
-        // img2.css('opacity', 1)
-        // img3.css('opacity', 0)
+/* Функция увеличивает индекс на 1, показывает следующй слайд*/
+function plusSlide() {
+    showSlides(slideIndex += 1);
+}
+
+/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+function minusSlide() {
+    showSlides(slideIndex -= 1);  
+}
+
+/* Устанавливает текущий слайд */
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+/* Основная функция слайдера */
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("item");
+    var dots = document.getElementsByClassName("slider-dots_item");
+    if (n > slides.length) {
+      slideIndex = 1
     }
-
-    setInterval(changeOpacity , 1000)
-})
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
